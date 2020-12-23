@@ -1,0 +1,20 @@
+# psi4 input file
+sys.path.insert(0, os.environ['PSI_PLUGIN_PATH'])
+import scf_plugin
+
+molecule {
+  0 1
+  O          0.000000000000     0.000000000000    -0.065775570538
+  H          0.000000000000    -0.759061990794     0.521953018295
+  H          0.000000000000     0.759061990794     0.521953018295
+}
+
+set {
+  basis cc-pvdz
+  e_convergence 1.0e-8
+  d_convergence 1.0e-8
+  scf_maxiter 50
+  guess core
+}
+
+energy('scf_plugin')

@@ -1,0 +1,297 @@
+
+    -----------------------------------------------------------------------
+          Psi4: An Open-Source Ab Initio Electronic Structure Package
+                               Psi4 1.3.2 release
+
+                         Git: Rev {} zzzzzzz 
+
+
+    R. M. Parrish, L. A. Burns, D. G. A. Smith, A. C. Simmonett,
+    A. E. DePrince III, E. G. Hohenstein, U. Bozkaya, A. Yu. Sokolov,
+    R. Di Remigio, R. M. Richard, J. F. Gonthier, A. M. James,
+    H. R. McAlexander, A. Kumar, M. Saitow, X. Wang, B. P. Pritchard,
+    P. Verma, H. F. Schaefer III, K. Patkowski, R. A. King, E. F. Valeev,
+    F. A. Evangelista, J. M. Turney, T. D. Crawford, and C. D. Sherrill,
+    J. Chem. Theory Comput. 13(7) pp 3185--3197 (2017).
+    (doi: 10.1021/acs.jctc.7b00174)
+
+
+                         Additional Contributions by
+    P. Kraus, H. Kruse, M. H. Lechner, M. C. Schieber, R. A. Shaw,
+    A. Alenaizan, R. Galvelis, Z. L. Glick, S. Lehtola, and J. P. Misiewicz
+
+    -----------------------------------------------------------------------
+
+
+    Psi4 started on: Wednesday, 23 December 2020 03:09PM
+
+    Process ID: 18522
+    Host:       localhost.localdomain
+    PSIDATADIR: /opt/psi4-1.3.2/share/psi4
+    Memory:     500.0 MiB
+    Threads:    1
+    
+  ==> Input File <==
+
+--------------------------------------------------------------------------
+# psi4 input file
+sys.path.insert(0, os.environ['PSI_PLUGIN_PATH'])
+import scf_plugin
+
+molecule {
+  0 1
+  O          0.000000000000     0.000000000000    -0.065775570538
+  H          0.000000000000    -0.759061990794     0.521953018295
+  H          0.000000000000     0.759061990794     0.521953018295
+}
+
+set {
+  basis cc-pvdz
+  e_convergence 1.0e-8
+  d_convergence 1.0e-8
+  scf_maxiter 50
+  guess core
+}
+
+energy('scf_plugin')
+--------------------------------------------------------------------------
+
+*** tstart() called on localhost.localdomain
+*** at Wed Dec 23 15:09:44 2020
+
+   => Loading Basis Set <=
+
+    Name: CC-PVDZ
+    Role: ORBITAL
+    Keyword: BASIS
+    atoms 1   entry O          line   198 file /opt/psi4-1.3.2/share/psi4/basis/cc-pvdz.gbs 
+    atoms 2-3 entry H          line    22 file /opt/psi4-1.3.2/share/psi4/basis/cc-pvdz.gbs 
+
+
+         ---------------------------------------------------------
+                                   SCF
+               by Justin Turney, Rob Parrish, Andy Simmonett
+                          and Daniel G. A. Smith
+                              RHF Reference
+                        1 Threads,    500 MiB Core
+         ---------------------------------------------------------
+
+  ==> Geometry <==
+
+    Molecular point group: c2v
+    Full point group: C2v
+
+    Geometry (in Angstrom), charge = 0, multiplicity = 1:
+
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+         O            0.000000000000     0.000000000000    -0.065775570547    15.994914619570
+         H            0.000000000000    -0.759061990794     0.521953018286     1.007825032230
+         H           -0.000000000000     0.759061990794     0.521953018286     1.007825032230
+
+  Running in c2v symmetry.
+
+  Rotational constants: A =     27.26297  B =     14.51533  C =      9.47217 [cm^-1]
+  Rotational constants: A = 817323.21126  B = 435158.60141  C = 283968.37536 [MHz]
+  Nuclear repulsion =    9.168193296425439
+
+  Charge       = 0
+  Multiplicity = 1
+  Electrons    = 10
+  Nalpha       = 5
+  Nbeta        = 5
+
+  ==> Algorithm <==
+
+  SCF Algorithm Type is PK.
+  DIIS enabled.
+  MOM disabled.
+  Fractional occupation disabled.
+  Guess Type is CORE.
+  Energy threshold   = 1.00e-08
+  Density threshold  = 1.00e-08
+  Integral threshold = 0.00e+00
+
+  ==> Primary Basis <==
+
+  Basis Set: CC-PVDZ
+    Blend: CC-PVDZ
+    Number of shells: 12
+    Number of basis function: 24
+    Number of Cartesian functions: 25
+    Spherical Harmonics?: true
+    Max angular momentum: 2
+
+  ==> Pre-Iterations <==
+
+   -------------------------------------------------------
+    Irrep   Nso     Nmo     Nalpha   Nbeta   Ndocc  Nsocc
+   -------------------------------------------------------
+     A1        11      11       0       0       0       0
+     A2         2       2       0       0       0       0
+     B1         4       4       0       0       0       0
+     B2         7       7       0       0       0       0
+   -------------------------------------------------------
+    Total      24      24       5       5       5       0
+   -------------------------------------------------------
+
+  ==> Integral Setup <==
+
+  Using in-core PK algorithm.
+   Calculation information:
+      Number of atoms:                   3
+      Number of AO shells:              12
+      Number of primitives:             32
+      Number of atomic orbitals:        25
+      Number of basis functions:        24
+
+      Integral cutoff                 1.00e-12
+      Number of threads:                 1
+
+  Performing in-core PK
+  Using 90300 doubles for integral storage.
+  We computed 3081 shell quartets total.
+  Whereas there are 3081 unique shell quartets.
+
+  ==> DiskJK: Disk-Based J/K Matrices <==
+
+    J tasked:                  Yes
+    K tasked:                  Yes
+    wK tasked:                  No
+    Memory [MiB]:              375
+    Schwarz Cutoff:          1E-12
+
+    OpenMP threads:              1
+
+  Minimum eigenvalue in the overlap matrix is 3.4377086613E-02.
+  Using Symmetric Orthogonalization.
+
+  SCF Guess: Core (One-Electron) Hamiltonian.
+
+  ==> Iterations <==
+
+                        Total Energy        Delta E     RMS |[F,P]|
+
+    Occupation by irrep:
+             A1    A2    B1    B2 
+    DOCC [     3,    0,    0,    2 ]
+
+   @RHF iter   1:   -68.87688077539218   -6.88769e+01   2.24857e-01 DIIS
+    Occupation by irrep:
+             A1    A2    B1    B2 
+    DOCC [     3,    0,    1,    1 ]
+
+   @RHF iter   2:   -69.94690659195369   -1.07003e+00   1.83988e-01 DIIS
+   @RHF iter   3:   -75.73850380420109   -5.79160e+00   6.30919e-02 DIIS
+   @RHF iter   4:   -76.00169075368602   -2.63187e-01   1.71016e-02 DIIS
+   @RHF iter   5:   -76.02636706984482   -2.46763e-02   1.54005e-03 DIIS
+   @RHF iter   6:   -76.02661123384765   -2.44164e-04   6.82937e-04 DIIS
+   @RHF iter   7:   -76.02665195583123   -4.07220e-05   9.55949e-05 DIIS
+   @RHF iter   8:   -76.02665357145858   -1.61563e-06   3.21653e-05 DIIS
+   @RHF iter   9:   -76.02665366108921   -8.96306e-08   1.86158e-06 DIIS
+   @RHF iter  10:   -76.02665366183808   -7.48869e-10   6.68332e-07 DIIS
+   @RHF iter  11:   -76.02665366188701   -4.89280e-11   1.19855e-07 DIIS
+   @RHF iter  12:   -76.02665366188845   -1.43530e-12   8.49397e-09 DIIS
+  Energy and wave function converged.
+
+
+  ==> Post-Iterations <==
+
+    Orbital Energies [Eh]
+    ---------------------
+
+    Doubly Occupied:                                                      
+
+       1A1   -20.550919     2A1    -1.335305     1B2    -0.697799  
+       3A1    -0.566090     1B1    -0.492954  
+
+    Virtual:                                                              
+
+       4A1     0.185103     2B2     0.255849     3B2     0.787301  
+       5A1     0.851798     6A1     1.163709     2B1     1.200352  
+       4B2     1.253479     7A1     1.444918     1A2     1.475588  
+       3B1     1.674083     8A1     1.867861     5B2     1.931955  
+       6B2     2.446380     9A1     2.483524     4B1     3.283305  
+       2A2     3.336169    10A1     3.506961    11A1     3.862825  
+       7B2     4.144454  
+
+    Final Occupation by Irrep:
+             A1    A2    B1    B2 
+    DOCC [     3,    0,    1,    1 ]
+
+  @RHF Final Energy:   -76.02665366188845
+
+   => Energetics <=
+
+    Nuclear Repulsion Energy =              9.1681932964254393
+    One-Electron Energy =                -123.1035621684408454
+    Two-Electron Energy =                  37.9087152101269567
+    Total Energy =                        -76.0266536618884459
+
+Computation Completed
+
+
+Properties will be evaluated at   0.000000,   0.000000,   0.000000 [a0]
+
+Properties computed using the SCF density matrix
+
+  Nuclear Dipole Moment: [e a0]
+     X:     0.0000      Y:     0.0000      Z:     0.9783
+
+  Electronic Dipole Moment: [e a0]
+     X:     0.0000      Y:     0.0000      Z:    -0.1682
+
+  Dipole Moment: [e a0]
+     X:     0.0000      Y:     0.0000      Z:     0.8101     Total:     0.8101
+
+  Dipole Moment: [D]
+     X:     0.0000      Y:     0.0000      Z:     2.0592     Total:     2.0592
+
+
+*** tstop() called on localhost.localdomain at Wed Dec 23 15:09:45 2020
+Module time:
+	user time   =       0.42 seconds =       0.01 minutes
+	system time =       0.02 seconds =       0.00 minutes
+	total time  =          1 seconds =       0.02 minutes
+Total time:
+	user time   =       0.42 seconds =       0.01 minutes
+	system time =       0.02 seconds =       0.00 minutes
+	total time  =          1 seconds =       0.02 minutes
+
+  A requested method does not make use of molecular symmetry: further calculations in C1 point group.
+
+
+Reading options from the SCF_PLUGIN block
+Calling plugin scf_plugin.so.
+
+
+Hello world!
+ 1  Energy = 0.00000000000000000000000 9.16819329642543934255627 9.16819329642543934255627 0.11662390482695711435568
+ 2  Energy = -78.04507407181753819713776 -68.87688077539209530186781 78.04507407181753819713776 0.31813053897551768489649
+ 3  Energy = -79.11509988837936191430344 -69.94690659195391901903349 1.07002581656182371716568 0.30521545450534964816214
+ 4  Energy = -82.46751128068495972911478 -73.29931798425951683384483 3.35241139230559781481134 0.15462487418368284219916
+ 5  Energy = -82.58886702438239524326491 -73.42067372795695234799496 0.12135574369743551415013 0.14880389200376267777592
+ 6  Energy = -83.85600512801590866729384 -74.68781183159046577202389 1.26713810363351342402893 0.05132222429353529985496
+ 7  Energy = -84.68493850261556588066014 -75.51674520619012298539019 0.82893337459965721336630 0.03208984899688370473481
+ 8  Energy = -85.01600599233077559802041 -75.84781269590533270275046 0.33106748971520971736027 0.01791919080616520554283
+ 9  Energy = -85.13313023853227434756263 -75.96493694210683145229268 0.11712424620149874954222 0.01083047626073201444297
+ 10  Energy = -85.17412345988788047179696 -76.00593016346243757652701 0.04099322135560612423433 0.00610202749878118073934
+ 11  Energy = -85.18788200455885828432656 -76.01968870813341538905661 0.01375854467097781252960 0.00359875895919478617710
+ 12  Energy = -85.19252094871086455896148 -76.02432765228542166369152 0.00463894415200627463491 0.00205255485699279037123
+ 13  Energy = -85.19406888784389764168736 -76.02587559141845474641741 0.00154793913303308272589 0.00119740823226039002324
+ 14  Energy = -85.19458712390766663702379 -76.02639382748222374175384 0.00051823606376899533643 0.00068771682770157644034
+ 15  Energy = -85.19476012327838532200985 -76.02656682685294242673990 0.00017299937071868498606 0.00039925710739589992870
+ 16  Energy = -85.19481795297608073269657 -76.02662465655063783742662 0.00005782969769541068672 0.00023005175302209676875
+ 17  Energy = -85.19483726705216497521178 -76.02664397062672207994183 0.00001931407608424251521 0.00013326938670445148813
+ 18  Energy = -85.19484372077025113867421 -76.02665042434480824340426 0.00000645371808616346243 0.00007690361390684424315
+ 19  Energy = -85.19484587664786090499547 -76.02665258022241800972552 0.00000215587760976632126 0.00004450544202383165555
+ 20  Energy = -85.19484659694617789682525 -76.02665330052073500155529 0.00000072029831699182978 0.00002570048039345154497
+ 21  Energy = -85.19484683758251719609689 -76.02665354115707430082693 0.00000024063633929927164 0.00001486573369060748256
+ 22  Energy = -85.19484691797858033623925 -76.02665362155313744096929 0.00000008039606314014236 0.00000858772244224485758
+ 23  Energy = -85.19484694483807629694638 -76.02665364841263340167643 0.00000002685949596070714 0.00000496594796164797934
+ 24  Energy = -85.19484695381179051310028 -76.02665365738634761783032 0.00000000897371421615389 0.00000286936747589228428
+
+    Psi4 stopped on: Wednesday, 23 December 2020 03:09PM
+    Psi4 wall time for execution: 0:00:01.57
+
+*** Psi4 exiting successfully. Buy a developer a beer!
