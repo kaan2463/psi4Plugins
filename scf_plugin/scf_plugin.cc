@@ -51,10 +51,6 @@ SCF_PLUGIN::~SCF_PLUGIN()
 
 }
 
-void SCF_PLUGIN::create_density_matrix(){
-
-}
-
 void SCF_PLUGIN::common_init()
 {
 

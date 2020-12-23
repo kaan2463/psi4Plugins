@@ -44,8 +44,6 @@ class SCF_PLUGIN : public Wavefunction
         // Functions
         void title();
         void common_init();
-        void create_density_matrix();
-
         
         // Variables
         SharedTensor2d Sso;
