@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -shared  -o scf_plugin.so CMakeFiles/scf_plugin.dir/tensors.cc.o CMakeFiles/scf_plugin.dir/scf_plugin.cc.o CMakeFiles/scf_plugin.dir/main.cc.o  -Wl,-rpath,/opt/psi4-1.3.2/lib/psi4 /opt/psi4-1.3.2/lib/psi4/core.cpython-39-x86_64-linux-gnu.so -lgomp -lpthread 

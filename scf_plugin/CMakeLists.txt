@@ -6,6 +6,8 @@ find_package(psi4 1.1 REQUIRED)
 
 add_psi4_plugin(scf_plugin
 		tensors.cc
+        rhf.cc
+        uhf.cc
         scf_plugin.cc
 		main.cc
 		)

@@ -28,9 +28,11 @@
 #include "psi4/libfock/jk.h"
 #include "tensors.h"
 
+#define ABS(x) (x<0?-x:x)
+#define CUT_OFF_DIAGONALIZE 1.0E10-15
 
 using namespace psi;
-using namespace scf_plugin; 
+using namespace psi4_plugin; 
 
 class SCF_PLUGIN : public Wavefunction
 {
@@ -44,9 +46,12 @@ class SCF_PLUGIN : public Wavefunction
         // Functions
         void title();
         void common_init();
-        
+        double rhf();
+        double uhf();
+
         // Variables
         SharedTensor2d Sso;
+        SharedTensor2d X;
         SharedTensor2d Tso;
         SharedTensor2d Vso;
         SharedTensor2d Hso;
@@ -56,8 +61,11 @@ class SCF_PLUGIN : public Wavefunction
         double tol_D; 
         int scf_maxiter;  
         int nso;
-        int doccA;
+        int noccA;
+        int noccB;
         double Enuc;
-};
+
+        std::string method;
+}a;
 
 #endif

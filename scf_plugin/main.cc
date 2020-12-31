@@ -36,6 +36,7 @@ int read_options(std::string name, Options &options)
         options.add_int("SCF_MAXITER", 50);
         options.add_double("E_CONVERGENCE", 1.0E-10);
         options.add_double("D_CONVERGENCE", 1.0E-6);
+        options.add_str("METHOD","RHF");
     }
 
     return true;

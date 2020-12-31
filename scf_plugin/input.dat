@@ -15,6 +15,10 @@ set {
   d_convergence 1.0e-8
   scf_maxiter 50
   guess core
+
+  method uhf
+  #method rhf
 }
+
 
 energy('scf_plugin')

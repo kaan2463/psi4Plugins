@@ -1,3 +1,0 @@
-/home/khan/psi4-workspace/plugins/scf_plugin/CMakeFiles/rebuild_cache.dir
-/home/khan/psi4-workspace/plugins/scf_plugin/CMakeFiles/edit_cache.dir
-/home/khan/psi4-workspace/plugins/scf_plugin/CMakeFiles/scf_plugin.dir

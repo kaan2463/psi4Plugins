@@ -26,7 +26,7 @@
 #include "psi4/libmints/vector.h"
 
 namespace psi {
-namespace scf_plugin {
+namespace psi4_plugin {
 
 void print_mat(double **a, int m, int n, std::string out);
 

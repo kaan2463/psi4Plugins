@@ -21,7 +21,7 @@ namespace psi {
 
 class PSIO;
 
-namespace scf_plugin {
+namespace psi4_plugin {
 
 class Tensor1d;
 class Tensor2d;
