@@ -1,0 +1,3 @@
+/home/khan/psi4-workspace/plugins/rhf_mp2/CMakeFiles/rebuild_cache.dir
+/home/khan/psi4-workspace/plugins/rhf_mp2/CMakeFiles/edit_cache.dir
+/home/khan/psi4-workspace/plugins/rhf_mp2/CMakeFiles/rhf_mp2.dir
